@@ -1,3 +1,37 @@
+/* Default/Light Mode Colors */
 :root {
-    --primary-color: #f356e6;
+    
+    --primary-color: #0BA13D; /* Buttons */
+    --background-color: #FFFDF8;
+
+    --green-button-hover: #1FD45B;
+
+    /* Cores dos textos */
+    --text-default: #323232;
+    --text-default-hover: #323232;
+    
+    --text-muted: #aab3cc;
+    /* Fonte texto */
+    --font-logo: 'Orelega One', serif;
+    --font-body: 'Roboto', sans-serif;
+
+     /* Alertas (cores fixas, usadas para feedbacks visuais) */
+    --success: #22c55e; /* Indica sucesso (verde) */
+    --warning: #eab308; /* Indica alerta (amarelo) */
+    --error: #991b1b; /* Indica erro (vermelho) */
+    --info: #0ea5e9; /* Indica informação (azul) */
+
+     /* Cores do Toastify (notificações) */
+    --toastify-color-light: var(--text-default);
+    --toastify-color-dark: var(--text-default);
+    --toastify-color-info: var(--info);
+    --toastify-color-success: var(--success);
+    --toastify-color-warning: var(--warning);
+    --toastify-color-error: var(--error);
+    --toastify-text-color-light: #0a0f1a;
+    --toastify-text-color-dark: #e6e9f0;
+    --toastify-color-progress-light: var(--primary);
+    --toastify-color-progress-dark: var(--primary);
+
+
 }

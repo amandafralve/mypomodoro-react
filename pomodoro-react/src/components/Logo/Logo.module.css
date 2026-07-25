@@ -1,0 +1,43 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+h1 {
+    font-family: var(--font-logo);
+    color: #0a0a0a;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Texto */
+.container:hover h1 {
+    color: #323232;
+    transition: color 0.2s ease;
+}
+
+/* Preenchimento do path vermelho */
+.container:hover :global(.logo-fill) {
+    fill: #ed2626af;
+    transition: fill 0.2s ease;
+}
+
+/* Contorno (stroke) do path verde */
+.container:hover :global(.logo-stroke-fill) {
+    stroke: #2ECC71;
+    transition: stroke 0.2s ease;
+}
+
+.logo-fill,
+.logo-stroke-fill {
+    transition: fill 0.2s ease, stroke 0.2s ease;
+}
