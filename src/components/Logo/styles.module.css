@@ -1,10 +1,11 @@
 
-.container {
+.logoLink {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0;
+    text-decoration: none;
 }
 
 h1 {
@@ -14,21 +15,21 @@ h1 {
 
 
 /* Texto */
-.container:hover h1 {
+.logoLink:hover h1 {
     color: #323232;
     transition: color 0.2s ease;
 }
 
 /* Preenchimento do path vermelho */
-.container:hover :global(.logo-fill) {
-    fill: #ed2626af;
-    transition: fill 0.2s ease;
+.logoLink:hover :global(.logo-fill) {
+    fill: #ed2626d3;
+    transition: all 0.2s ease-in-out ;
 }
 
 /* Contorno (stroke) do path verde */
-.container:hover :global(.logo-stroke-fill) {
-    stroke: #2ECC71;
-    transition: stroke 0.2s ease;
+.logoLink:hover :global(.logo-stroke-fill) {
+    stroke: #0ba13dd5;
+    transition: all 0.2s ease-in-out;
 }
 
 .logo-fill,

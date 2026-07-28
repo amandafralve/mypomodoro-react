@@ -2,21 +2,3 @@
     width: 100px;
     cursor: pointer;
 }
-
-.logo-fill {
-    fill: #ED2626;
-    transition: fill 0.3s ease;
-}
-
-.logo-stroke {
-    stroke: #0BA13D;
-    transition: stroke 0.3s ease;
-}
-
-.logo-svg:hover .logo-fill {
-    fill: #FF5252; 
-}
-
-.logo-svg:hover .logo-stroke {
-    stroke: #22C55E; 
-}

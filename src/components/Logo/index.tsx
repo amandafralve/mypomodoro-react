@@ -3,9 +3,9 @@ import MyPomodoroLogo from "./icon/LogoIcon";
 
 export function Logo() {
     return (
-        <div className={styles.container}>
+        <a className={styles.logoLink} href="#">
             <MyPomodoroLogo />
             <h1>my pomodoro</h1>
-        </div>
+        </a>
     );
 }
