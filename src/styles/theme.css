@@ -11,6 +11,8 @@
     --text-default-hover: #323232;
     
     --text-muted: #aab3cc;
+    --text-over-primary: #252525;
+    
     /* Fonte texto */
     --font-logo: 'Orelega One', serif;
     --font-body: 'Roboto', sans-serif;
