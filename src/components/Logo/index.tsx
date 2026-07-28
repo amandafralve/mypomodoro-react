@@ -1,4 +1,4 @@
-import styles from "./Logo.module.css";
+import styles from "./styles.module.css";
 import MyPomodoroLogo from "./icon/LogoIcon";
 
 export function Logo() {

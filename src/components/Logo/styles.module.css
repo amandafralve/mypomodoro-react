@@ -12,12 +12,6 @@ h1 {
     color: #0a0a0a;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
 
 /* Texto */
 .container:hover h1 {
