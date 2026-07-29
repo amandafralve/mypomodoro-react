@@ -3,8 +3,12 @@
     
     --primary-color: #0BA13D; /* Buttons */
     --background-color: #FFFDF8;
-
     --green-button-hover: #1FD45B;
+
+    /* Cycles */
+    --workTime: rgb(34, 104, 188);
+    --shortBreakTime: rgb(227, 131, 14);
+    --longBreakTime: rgb(76, 189, 35);
 
     /* Cores dos textos */
     --text-default: #323232;
