@@ -1,46 +1,59 @@
+
 .genericHtml h1 {
-    font-size: 3.2rem;
-    margin-bottom: 1.6rem;
+  font-size: 3.2rem;
+  margin-bottom: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .genericHtml h2 {
-    font-size: 2.4rem;
-    margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+  margin-top: 5rem;
+  margin-bottom: 1.2rem;
 }
 
 .genericHtml h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-top: 3.8rem;
+  margin-bottom: 1rem;
 }
 
 .genericHtml p {
-    font-size: 1.6rem;
-    line-height: 1.6;
-    margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+  display: block; 
 }
 
-.genericHtml a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: bold;
+.genericHtml a,
+.genericHtml a:-webkit-any-link {
+  color: var(--link-color, #0066cc);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .genericHtml a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+/* Listas */
 .genericHtml ul {
-    padding-left: 2.4rem;
+  padding-left: 2.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .genericHtml li {
-    margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
 }
 
+/* Imagens */
 .genericHtml img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.8rem;
-    display: block;
-    margin: 1.6rem 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  display: block;
+  margin: 2.4rem auto;
 }
