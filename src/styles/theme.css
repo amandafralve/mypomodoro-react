@@ -17,6 +17,8 @@
     
     --text-muted: #999fb1;
     --text-over-primary: #252525;
+    --text-logo: #0a0a0a;
+    --text-logo-hover: #323232;
     
     /* Fonte texto */
     --font-logo: 'Orelega One', serif;
@@ -41,4 +43,48 @@
     --toastify-color-progress-dark: var(--primary);
 
 
+}
+
+:root[data-theme='dark'] {
+        
+    --primary-color: #0BA13D; /* Buttons */
+    --background-color: #252525;
+    --green-button-hover: #1FD45B;
+    --red-button: #991b1b;
+
+    /* Cycles */
+    --workTime: rgb(34, 104, 188);
+    --shortBreakTime: rgb(227, 131, 14);
+    --longBreakTime: rgb(76, 189, 35);
+
+    /* Cores dos textos */
+    --text-default: #FFFDF8;
+    --text-default-hover: #FFFDF8;
+    
+    --text-muted: #999fb1;
+    --text-over-primary: #FFFDF8;
+    --text-logo: #e2e2e2;
+    --text-logo-hover: #ffffff;
+    
+    /* Fonte texto */
+    --font-logo: 'Orelega One', serif;
+    --font-body: 'Roboto', sans-serif;
+
+     /* Alertas (cores fixas, usadas para feedbacks visuais) */
+    --success: #22c55e; /* Indica sucesso (verde) */
+    --warning: #eab308; /* Indica alerta (amarelo) */
+    --error: #991b1b; /* Indica erro (vermelho) */
+    --info: #0ea5e9; /* Indica informação (azul) */
+
+     /* Cores do Toastify (notificações) */
+    --toastify-color-light: var(--text-default);
+    --toastify-color-dark: var(--text-default);
+    --toastify-color-info: var(--info);
+    --toastify-color-success: var(--success);
+    --toastify-color-warning: var(--warning);
+    --toastify-color-error: var(--error);
+    --toastify-text-color-light: #0a0f1a;
+    --toastify-text-color-dark: #e6e9f0;
+    --toastify-color-progress-light: var(--primary);
+    --toastify-color-progress-dark: var(--primary);
 }

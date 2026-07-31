@@ -10,13 +10,13 @@
 
 h1 {
     font-family: var(--font-logo);
-    color: #0a0a0a;
+    color: var(--text-logo);
 }
 
 
 /* Texto */
 .logoLink:hover h1 {
-    color: #323232;
+    color:var(--text-logo-hover);
     transition: color 0.2s ease;
 }
 
