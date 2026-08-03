@@ -1,0 +1,78 @@
+
+.genericHtml h1 {
+  font-size: 3.2rem;
+  margin-bottom: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutTechnique {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  display: block; 
+  background-color: var(--background-about);
+  padding: 2.4rem;
+  border-radius: 2rem;
+  border: 0.1rem solid var( --text-default);
+  color: var(--text-about);
+}
+
+.genericHtml h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-top: 5rem;
+  margin-bottom: 1.2rem;
+}
+
+.genericHtml h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3.8rem;
+  margin-bottom: 1rem;
+}
+
+.genericHtml p {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  display: block; 
+}
+
+.genericHtml a,
+.genericHtml a:-webkit-any-link {
+  color: var(--link-color, #0066cc);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.genericHtml a:hover {
+  text-decoration: underline;
+}
+
+/* Listas */
+.genericHtml ul {
+  padding-left: 2.4rem;
+  margin-bottom: 1.6rem;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.genericHtml li {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+/* Imagens */
+.genericHtml img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+  display: block;
+  margin: 2.4rem auto;
+}

@@ -24,6 +24,12 @@
     --font-logo: 'Orelega One', serif;
     --font-body: 'Roboto', sans-serif;
 
+    /* Cards */
+    /* Card About */
+    --background-about: aliceblue;
+    --text-about: #323232;
+
+
      /* Alertas (cores fixas, usadas para feedbacks visuais) */
     --success: #22c55e; /* Indica sucesso (verde) */
     --warning: #eab308; /* Indica alerta (amarelo) */
@@ -81,6 +87,13 @@
 
     /* Cores Grid dop background */
     --bg-dot-color: rgba(255, 255, 255, 0.141);
+
+    /* Cards */
+    /* Card About */
+    --background-about: aliceblue;
+    --text-about: #323232;
+    
+
 
      /* Cores do Toastify (notificações) */
     --toastify-color-light: var(--text-default);
