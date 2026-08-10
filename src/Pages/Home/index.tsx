@@ -1,3 +1,4 @@
+
 import { MainTemplate } from '../../Templates/MainTemplates';
 import { Container } from '../../components/Container';
 import { Countdown } from '../../components/Countdown';
@@ -7,7 +8,8 @@ import '../../styles/global.css'
 import '../../styles/theme.css'
 
 
-export function Home(){
+export function Home(){;
+
     return ( 
         <MainTemplate >
             <Container>

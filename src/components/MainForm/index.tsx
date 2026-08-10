@@ -3,15 +3,17 @@ import { Cycles } from "../Cycles"
 import { Button } from "../Button"
 import { PlayCircleIcon } from "lucide-react"
 
+
 export function MainForm() {
     return (
         <form className='form' action="">
+            
             <div className="formRow">
                 <Input id='meuInput' labelText='Task' type='text' placeholder='Type your task'/>
             </div>
 
             <div className="formRow">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>O próximo intervalo é de c min</p>
             </div>
 
             <div>
