@@ -76,7 +76,6 @@ export function MainForm() {
                 </div>
             )}
             
-
             <div className="formRow">
                 <Button icon={<PlayCircleIcon />} color='green'/>
             </div>
