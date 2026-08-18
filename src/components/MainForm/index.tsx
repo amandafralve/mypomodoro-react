@@ -81,7 +81,8 @@ export function MainForm() {
                     type='text' 
                     placeholder='Type your task'
                     ref={taskNameInput} 
-                    disabled={!!state.activeTask}/>
+                    disabled={!!state.activeTask}
+                    autoComplete="off"/>
             </div>
 
             <div className="formRow">
