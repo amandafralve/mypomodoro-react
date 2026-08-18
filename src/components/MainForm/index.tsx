@@ -1,7 +1,7 @@
 import { Input } from "../Input"
 import { Cycles } from "../Cycles"
 import { Button } from "../Button"
-import { PlayCircleIcon } from "lucide-react"
+import { PlayCircleIcon, StopCircleIcon } from "lucide-react"
 import { useRef } from "react"
 import type { TaskModel } from "../../models/TaskModel"
 import { useTaskContext } from "../../Contexts/TaskContext/useTaskContext"
@@ -31,7 +31,7 @@ export function MainForm() {
         }
 
         const newTask: TaskModel = {
-            id: Date.now.toString(),
+            id: Date.now().toString(),
             name: taskName,
             startDate: Date.now(),
             completeDate: null,
@@ -54,6 +54,23 @@ export function MainForm() {
         })
     }
 
+    function handleInterruptTask() {
+        setState(prevState => {
+            return {
+                ...prevState,
+                activeTask: null,
+                secondsRemaining: 0,
+                formattedSecondsRemaining: '00:00',
+                task: prevState.tasks.map(task => {
+                    if (prevState.activeTask && prevState.activeTask.id === task.id){
+                        return { ...task, interruptDae: Date.now() };
+                    }
+                    return task;
+                })
+            }
+        })
+    }
+
     return (
         <form onSubmit={handleCreateNewTask} className='form' action="">
             
@@ -63,7 +80,8 @@ export function MainForm() {
                     labelText='Task' 
                     type='text' 
                     placeholder='Type your task'
-                    ref={taskNameInput} />
+                    ref={taskNameInput} 
+                    disabled={!!state.activeTask}/>
             </div>
 
             <div className="formRow">
@@ -77,7 +95,26 @@ export function MainForm() {
             )}
             
             <div className="formRow">
-                <Button icon={<PlayCircleIcon />} color='green'/>
+                {!state.activeTask && (
+                    <Button  
+                        type='submit'
+                        icon={<PlayCircleIcon />} 
+                        color='green'
+                        aria-label='Iniciar nova tarefa'
+                        title='Iniciar nova tarefa'
+                    />
+                )}
+                
+                {!!state.activeTask &&(
+                    <Button  
+                        type='button'
+                        icon={<StopCircleIcon />} 
+                        color='red'
+                        aria-label='Interromper tarefa atual'
+                        title='Interromper tarefa atual'
+                        onClick={handleInterruptTask}
+                    />
+                )}
             </div>
         </form>
     )
