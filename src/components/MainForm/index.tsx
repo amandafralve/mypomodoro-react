@@ -9,6 +9,7 @@ import { getNextCycle } from "../../utils/getNextCycle"
 import { getNextCycleType } from "../../utils/getNextCycleType"
 import { TaskActionTypes } from "../../Contexts/TaskContext/taskActions"
 import { Tips } from "../Tips"
+import { TimerWorkerManager } from "../../workers/timerWorkerManager"
 
 
 export function MainForm() {
@@ -43,6 +44,12 @@ export function MainForm() {
         }
 
         dispatch({type: TaskActionTypes.START_TASK, payload: newTask })
+
+        const worker = TimerWorkerManager.getInstance();
+        
+        worker.onmessage((event) => {
+            console.log(event.data)
+        })
     }
 
     function handleInterruptTask() {
@@ -58,7 +65,7 @@ export function MainForm() {
                     id='meuInput' 
                     labelText='Task' 
                     type='text' 
-                    placeholder='Type your task'
+                    placeholder='Escreva sua tarefa'
                     ref={taskNameInput} 
                     disabled={!!state.activeTask}
                     autoComplete="off"/>
