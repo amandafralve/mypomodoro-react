@@ -1,5 +1,3 @@
-
-
 let isRunning = false;
 
 self.onmessage = function(event){

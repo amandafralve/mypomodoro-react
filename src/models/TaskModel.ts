@@ -8,5 +8,4 @@ export type TaskModel = {
     completeDate: number | null ; // qnd timer chega ao final
     interruptDate: number | null; // qnd a task for interrompida
     type: keyof TaskStateModel['config']
-
-}
+};

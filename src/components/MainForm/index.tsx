@@ -9,8 +9,6 @@ import { getNextCycle } from "../../utils/getNextCycle"
 import { getNextCycleType } from "../../utils/getNextCycleType"
 import { TaskActionTypes } from "../../Contexts/TaskContext/taskActions"
 import { Tips } from "../Tips"
-import { TimerWorkerManager } from "../../workers/timerWorkerManager"
-
 
 export function MainForm() {
     const taskNameInput = useRef<HTMLInputElement>(null);
@@ -23,7 +21,7 @@ export function MainForm() {
 
     function handleCreateNewTask(event: React.FormEvent<HTMLFormElement> ){
         event.preventDefault();
-        console.log("Certo")
+        
 
         if (taskNameInput.current === null) return;
         const taskName = taskNameInput.current.value.trim();
@@ -44,12 +42,6 @@ export function MainForm() {
         }
 
         dispatch({type: TaskActionTypes.START_TASK, payload: newTask })
-
-        const worker = TimerWorkerManager.getInstance();
-        
-        worker.onmessage((event) => {
-            console.log(event.data)
-        })
     }
 
     function handleInterruptTask() {
@@ -59,7 +51,6 @@ export function MainForm() {
 
     return (
         <form onSubmit={handleCreateNewTask} className='form' action="">
-            
             <div className="formRow">
                 <Input 
                     id='meuInput' 
@@ -76,7 +67,7 @@ export function MainForm() {
             </div>
 
             {state.currentCycle > 0 &&(
-                <div>
+                <div className="formRow">
                     <Cycles/>
                 </div>
             )}

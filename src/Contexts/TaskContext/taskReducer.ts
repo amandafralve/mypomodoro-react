@@ -63,7 +63,7 @@ export function taskReducer(state: TaskStateModel, action: TaskActionModel): Tas
             };
         }
 
-        default:
-            return state;
+            
     }
+    return state;
 }
