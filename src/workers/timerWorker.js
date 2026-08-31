@@ -1,23 +1,29 @@
-let isRunning = false;
+let timeoutId = null;
 
-self.onmessage = function(event){
-    if(isRunning) return;
-    isRunning = true;
-
+self.onmessage = function (event) {
     const state = event.data;
     const { activeTask, secondsRemaining } = state;
 
-    const endDate = activeTask.startDate + secondsRemaining * 1000;
-    const now = Date.now();
-    let countDownSeconds = Math.ceil((endDate - now)/1000);
+    // sempre cancela qualquer contagem anterior antes de decidir o que fazer
+    if (timeoutId !== null) {
+        clearTimeout(timeoutId);
+        timeoutId = null;
+    }
 
-    function tick(){
-        self.postMessage(countDownSeconds);
+    if (!activeTask) return; // sem tarefa ativa, não inicia contagem
+
+    const endDate = activeTask.startDate + secondsRemaining * 1000;
+
+    function tick() {
         const now = Date.now();
-        countDownSeconds = Math.floor((endDate - now)/1000);
-        
-        setTimeout(tick, 1000)
+        const countDownSeconds = Math.round((endDate - now) / 1000);
+
+        self.postMessage(countDownSeconds);
+
+        if (countDownSeconds > 0) {
+            timeoutId = setTimeout(tick, 1000);
+        }
     }
 
     tick();
-}
+};
