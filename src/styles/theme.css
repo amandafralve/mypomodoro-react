@@ -28,6 +28,9 @@
     --background-about: aliceblue;
     --text-about: #323232;
 
+    /* Table Colors */
+    --heading: #0BA13D ;
+    --content: #d1d1d1;
 
      /* Alertas (cores fixas, usadas para feedbacks visuais) */
     --success: #22c55e; /* Indica sucesso (verde) */
@@ -67,6 +70,10 @@
     /* Fonte texto */
     --font-logo: 'Orelega One', serif;
     --font-body: 'Roboto', sans-serif;
+    
+    /* Table Colors */
+    --heading: #0BA13D ;
+    --content: #d1d1d1;
 
      /* Alertas (cores fixas, usadas para feedbacks visuais) */
     --success: #22c55e; /* Indica sucesso (verde) */

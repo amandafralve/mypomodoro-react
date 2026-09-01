@@ -1,11 +1,12 @@
 import styles from "./styles.module.css";
 import MyPomodoroLogo from "./icon/LogoIcon";
+import { RouterLink } from "../RouterLink";
 
 export function Logo() {
     return (
-        <a className={styles.logoLink} href="#">
+        <RouterLink className={styles.logoLink} href="/">
             <MyPomodoroLogo />
             <h1>my pomodoro</h1>
-        </a>
+        </RouterLink>
     );
 }

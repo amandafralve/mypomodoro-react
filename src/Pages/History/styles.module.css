@@ -1,0 +1,37 @@
+
+.buttonContainer button {
+    min-width: auto;
+    margin: 0;
+    padding: 1.4rem;
+}
+
+.buttonContainer button svg{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.responsiveTable{
+    overflow-x: auto;
+    border-radius: 0.8rem;
+}
+
+.responsiveTable table {
+    width: 100%;
+    min-width: 64rem;
+    font-size: 1.6rem;
+    border-collapse: collapse;
+}
+
+.responsiveTable td{
+    background-color: var(--content);
+    color: var(--text-about);
+}
+.responsiveTable th{
+    background-color: var(--heading);
+}
+.responsiveTable td, 
+.responsiveTable th {
+    border-bottom: 0.2rem solid var(--text-muted);
+    text-align: left;
+    padding: 1.6rem;
+}

@@ -14,6 +14,7 @@ import { toastifyAdapter } from "../adapters/toastifyAdapter"
 export function MainForm() {
     const taskNameInput = useRef<HTMLInputElement>(null);
     const {state, dispatch} = useTaskContext();
+    const lastTaskName = state.tasks[state.tasks.length -1 ]?.name || '';
 
     // ciclo
     const nextCycle = getNextCycle(state.currentCycle)
@@ -64,7 +65,9 @@ export function MainForm() {
                     placeholder='Escreva sua tarefa'
                     ref={taskNameInput} 
                     disabled={!!state.activeTask}
-                    autoComplete="off"/>
+                    autoComplete="off"
+                    defaultValue={lastTaskName}
+                />
             </div>
 
             <div className="formRow">
