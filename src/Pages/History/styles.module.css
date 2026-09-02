@@ -24,14 +24,22 @@
 
 .responsiveTable td{
     background-color: var(--content);
-    color: var(--text-about);
+    color: var(--text-default);
 }
 .responsiveTable th{
     background-color: var(--heading);
 }
 .responsiveTable td, 
 .responsiveTable th {
-    border-bottom: 0.2rem solid var(--text-muted);
+    border-bottom: 0.2rem solid var(--divider);
     text-align: left;
     padding: 1.6rem;
+}
+
+.thSort{
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+.thSort:hover{
+    filter: brightness(80%);
 }

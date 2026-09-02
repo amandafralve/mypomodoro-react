@@ -30,7 +30,7 @@
 
     /* Table Colors */
     --heading: #0BA13D ;
-    --content: #d1d1d1;
+    --content: #FFFDF8;
 
      /* Alertas (cores fixas, usadas para feedbacks visuais) */
     --success: #22c55e; /* Indica sucesso (verde) */
@@ -73,7 +73,8 @@
     
     /* Table Colors */
     --heading: #0BA13D ;
-    --content: #d1d1d1;
+    --content: #312f2f;
+    --divider: #000000;
 
      /* Alertas (cores fixas, usadas para feedbacks visuais) */
     --success: #22c55e; /* Indica sucesso (verde) */
