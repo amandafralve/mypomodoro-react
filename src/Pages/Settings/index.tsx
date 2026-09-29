@@ -8,7 +8,7 @@ import { Input } from '../../components/Input';
 
 import '../../styles/global.css'
 import '../../styles/theme.css'
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTaskContext } from '../../Contexts/TaskContext/useTaskContext';
 import { toastifyAdapter } from '../../components/adapters/toastifyAdapter';
 import { TaskActionTypes } from '../../Contexts/TaskContext/taskActions';
@@ -20,6 +20,10 @@ export function Settings(){
     const shortBreakInputRef = useRef<HTMLInputElement>(null);
     const longBreakInputRef = useRef<HTMLInputElement>(null);
 
+    useEffect(() => {
+        document.title = 'Configurações - My Pomodoro'
+    },[])
+    
     function handleSaveSettings(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
         const formErrors = [];
@@ -56,7 +60,11 @@ export function Settings(){
 
     return ( 
         <MainTemplate >
-            <Container><Heading>Configurações</Heading></Container>
+            <Container>
+                <Heading>
+                    <span><h2>Configurações</h2></span>
+                </Heading>
+            </Container>
 
             <Container>
                 <p>Modifique as configurações para tempo de foco, descnso curto e descanso longo</p>

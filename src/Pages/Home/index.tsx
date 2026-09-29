@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react';
 import { MainTemplate } from '../../Templates/MainTemplates';
 import { Container } from '../../components/Container';
 import { Countdown } from '../../components/Countdown';
@@ -9,6 +10,9 @@ import '../../styles/theme.css'
 
 
 export function Home(){;
+    useEffect(() => {
+        document.title = 'My Pomodoro - Home'
+    },[])
 
     return ( 
         <MainTemplate >

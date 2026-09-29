@@ -20,6 +20,10 @@ export function History() {
 
     const hasTasks = state.tasks.length > 0;
 
+    useEffect(() => {
+        document.title = 'Histórico - My Pomodoro'
+    },[])
+
     const [sortTasksOptions, setSortTaskOptions] = useState<
         Pick<SortTasksOptions, 'field' | 'direction'>
     >({

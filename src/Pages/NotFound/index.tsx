@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { MainTemplate } from '../../Templates/MainTemplates';
 import { Container } from '../../components/Container';
 import { Heading } from '../../components/Heading';
@@ -8,6 +9,10 @@ import '../../styles/theme.css'
 
 
 export function NotFound(){
+    useEffect(() => {
+        document.title = '404 Página não encontrada'
+    },[])
+
     return ( 
         <MainTemplate >
             <Container>
