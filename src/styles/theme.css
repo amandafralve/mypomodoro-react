@@ -43,7 +43,14 @@
 
     /* Cores do Toastify (notificações) */
     --toastify-text-color-light: #e6e9f0;
-        --toastify-text-color-dark: #e6e9f0; 
+    --toastify-text-color-dark: #e6e9f0; 
+
+    /* Página Sobre / conteúdo genérico */
+    --link-color: #0a7d30;
+    --surface-card: #ffffff;
+    --border-card: rgba(50, 50, 50, 0.15);
+    --shadow-card: 0 0.4rem 1.6rem rgba(0, 0, 0, 0.08);
+    --accent-soft: rgba(11, 161, 61, 0.12);
 }
 
 :root[data-theme='dark'] {
@@ -101,4 +108,15 @@
     --toastify-text-color-dark: #e6e9f0;
     --toastify-color-progress-light: var(--primary-color);
     --toastify-color-progress-dark: var(--primary-color);
+
+    /* Card About */
+    --background-about: #1e2a3a;
+    --text-about: #e6edf7;
+
+    /* Página Sobre / conteúdo genérico */
+    --link-color: #1FD45B;
+    --surface-card: #312f2f;
+    --border-card: rgba(255, 255, 255, 0.12);
+    --shadow-card: 0 0.4rem 1.6rem rgba(0, 0, 0, 0.4);
+    --accent-soft: rgba(31, 212, 91, 0.15);
 }
